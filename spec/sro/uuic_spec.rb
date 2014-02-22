@@ -10,4 +10,12 @@ describe Sro::Uuid do
       expect(pattern).to match(uuid)
     end
   end
+
+  context "#version5" do
+    it "matches the pattern" do
+      uuid    = subject.version5
+      pattern = subject.pattern
+      expect(uuid).to match(pattern)
+    end
+  end
 end
