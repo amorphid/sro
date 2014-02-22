@@ -14,8 +14,7 @@ describe Uuid::Version5 do
   context "#timestamp" do
     it "returns a UUIDTools::UUID object" do
       object    = subject.timestamp
-      obj_class = object.class
-      expect(obj_class).to eq(UUIDTools::UUID)
+      expect(object).to be_instance_of(UUIDTools::UUID)
     end
   end
 end
