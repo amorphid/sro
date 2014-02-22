@@ -1,11 +1,7 @@
 require "spec_helper"
 
-describe Uuid::Version5 do
-  let(:pattern) do
-    /([a-z]|\d){8}-([a-z]|\d){4}-([a-z]|\d){4}-([a-z]|\d){4}-([a-z]|\d){12}/
-  end
-
-  subject { Uuid::Version5.new }
+describe Sro::Uuid::Version5 do
+  subject { Sro::Uuid::Version5.new }
 
   context "#mac_address" do
     it "retrieves computers mac address" do
@@ -17,6 +13,7 @@ describe Uuid::Version5 do
 
   context "#run" do
     it "returns a uuid" do
+      pattern = Sro::Uuid.pattern
       uuid = subject.run
       expect(uuid).to match(pattern)
     end
