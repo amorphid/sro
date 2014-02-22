@@ -1,2 +1,5 @@
+# ignores gem build file(s)
+/sro-*.gem
+
 # ignores bundler files
 /.bundle
