@@ -3,5 +3,5 @@ require "uuidtools"
 module Sro
 end
 
-require "./lib/sro/uuid"
-require "./lib/sro/uuid/version5"
+require "sro/uuid"
+require "sro/uuid/version5"
