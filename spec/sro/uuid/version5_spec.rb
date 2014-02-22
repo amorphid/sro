@@ -13,7 +13,14 @@ describe Uuid::Version5 do
 
   context "#timestamp" do
     it "returns a UUIDTools::UUID object" do
-      object    = subject.timestamp
+      object = subject.timestamp
+      expect(object).to be_instance_of(UUIDTools::UUID)
+    end
+  end
+
+  context "#version5" do
+    it "generates a Version 5 UUID" do
+      object = subject.version5
       expect(object).to be_instance_of(UUIDTools::UUID)
     end
   end
