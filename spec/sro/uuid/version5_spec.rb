@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe Version5 do
-  subject { Version5.new }
+describe Uuid::Version5 do
+  subject { Uuid::Version5.new }
 
   context "#timestamp" do
     it "returns a UUIDTools::UUID object" do
