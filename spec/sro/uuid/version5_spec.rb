@@ -1,6 +1,10 @@
 require "spec_helper"
 
 describe Uuid::Version5 do
+  let(:pattern) do
+    /([a-z]|\d){8}-([a-z]|\d){4}-([a-z]|\d){4}-([a-z]|\d){4}-([a-z]|\d){12}/
+  end
+
   subject { Uuid::Version5.new }
 
   context "#mac_address" do
@@ -8,6 +12,13 @@ describe Uuid::Version5 do
       mac_address = subject.mac_address
       pattern     = /((\d|[a-f]){2}:){5}(\d|[a-f]){2}/
       expect(mac_address).to match(pattern)
+    end
+  end
+
+  context "#run" do
+    it "returns a uuid" do
+      uuid = subject.run
+      expect(uuid).to match(pattern)
     end
   end
 
