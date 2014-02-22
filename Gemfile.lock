@@ -23,6 +23,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pry (= 0.9.12.6)
-  rspec (= 2.14.1)
-  uuidtools (= 2.1.4)
+  pry (~> 0.9.12.6)
+  rspec (~> 2.14.1)
+  uuidtools (~> 2.1.4)
