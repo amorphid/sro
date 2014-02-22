@@ -4,6 +4,10 @@ module Sro::Uuid
       mac_address = UUIDTools::UUID.mac_address
     end
 
+    def run
+      version5.to_s
+    end
+
     def timestamp
       UUIDTools::UUID.timestamp_create
     end
