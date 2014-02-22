@@ -7,5 +7,9 @@ module Sro::Uuid
     def timestamp
       UUIDTools::UUID.timestamp_create
     end
+
+    def version5
+      UUIDTools::UUID.sha1_create(timestamp, mac_address)
+    end
   end
 end
