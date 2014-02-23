@@ -14,6 +14,14 @@ module Sro::Mock
       self.instance_eval(setter)
     end
 
+    def run(args)
+      args.each do |key, value|
+        inject_getter(key)
+        inject_setter(key)
+        set_value(key, value)
+      end
+    end
+
     def set_getter(key)
       "def #{key}; @#{key} ; end;"
     end

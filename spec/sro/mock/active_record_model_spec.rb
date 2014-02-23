@@ -58,11 +58,11 @@ describe Sro::Mock::ActiveRecordModel do
 
   context "#run" do
     it "creates getters and setters from input" do
-      object = subject.run(hello: "world", seeya: nil)
-      world  = object.hello
-      expect(world).to eq("world")
-      object.seeya = "later"
-      expect(seeya).to eq("later")
+      subject.run(hello: "world", seeya: nil)
+      expect(subject.hello).to eq("world")
+      expect(subject.seeya).to eq(nil)
+      subject.seeya = "later"
+      expect(subject.seeya).to eq("later")
     end
   end
 end
