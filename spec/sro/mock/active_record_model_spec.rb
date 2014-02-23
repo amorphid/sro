@@ -24,4 +24,11 @@ describe Sro::Mock::ActiveRecordModel do
       expect(hello).to eq("world")
     end
   end
+
+  context "#set_getter" do
+    it "generates getter" do
+      getter = subject.set_getter(:hello)
+      expect(getter).to eq("def hello; @hello ; end;")
+    end
+  end
 end
