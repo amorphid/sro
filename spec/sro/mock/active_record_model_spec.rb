@@ -47,4 +47,12 @@ describe Sro::Mock::ActiveRecordModel do
       expect(getter).to eq("def hello=(value); @hello=value; end;")
     end
   end
+
+  context "#set_value" do
+    it "#set_value" do
+      subject.set_value(:hello, "world")
+      hello = subject.instance_variable_get("@hello")
+      expect(hello).to eq("world")
+    end
+  end
 end
