@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe Sro::Uuid::Version5 do
-  subject { Sro::Uuid::Version5.new }
+describe Sro::Uuid::Version5Uuid do
+  subject { Sro::Uuid::Version5Uuid.new }
 
   context "#mac_address" do
     it "retrieves computers mac address" do

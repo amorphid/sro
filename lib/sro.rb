@@ -4,4 +4,4 @@ module Sro
 end
 
 require "sro/uuid"
-require "sro/uuid/version5"
+require "sro/uuid/version5_uuid"

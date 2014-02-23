@@ -5,6 +5,6 @@ module Sro::Uuid
   end
 
   def self.version5
-    Version5.new.run
+    Version5Uuid.new.run
   end
 end

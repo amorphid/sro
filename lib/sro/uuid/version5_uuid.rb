@@ -1,5 +1,5 @@
 module Sro::Uuid
-  class Version5
+  class Version5Uuid
     def mac_address
       UUIDTools::UUID.mac_address
     end
