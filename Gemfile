@@ -1,5 +1,6 @@
 source "https://www.rubygems.org"
 
+gem "activerecord", "~> 4.0.2"
 gem "uuidtools", "~> 2.1.4"
 
 group :development, :test do
