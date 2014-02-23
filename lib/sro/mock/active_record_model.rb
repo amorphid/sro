@@ -8,5 +8,9 @@ module Sro::Mock
       getter = set_getter(key)
       self.instance_eval(getter)
     end
+
+    def set_getter(key)
+      "def #{key}; @#{key} ; end;"
+    end
   end
 end
