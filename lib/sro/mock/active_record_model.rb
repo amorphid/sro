@@ -17,5 +17,9 @@ module Sro::Mock
     def set_getter(key)
       "def #{key}; @#{key} ; end;"
     end
+
+    def set_setter(key)
+      "def #{key}=(value); @#{key}=value; end;"
+    end
   end
 end
