@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    sro (0.0.2)
+      activerecord (~> 4.0.2)
+      uuidtools (~> 2.1.4)
+
 GEM
   remote: https://www.rubygems.org/
   specs:
@@ -48,8 +55,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 4.0.2)
+  bundler (~> 1.5)
   pry (~> 0.9.12.6)
   rspec (~> 2.14.1)
   sqlite3 (~> 1.3.8)
-  uuidtools (~> 2.1.4)
+  sro!
