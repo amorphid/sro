@@ -49,10 +49,20 @@ describe Sro::Mock::ActiveRecordModel do
   end
 
   context "#set_value" do
-    it "#set_value" do
+    it "sets instance variable" do
       subject.set_value(:hello, "world")
       hello = subject.instance_variable_get("@hello")
       expect(hello).to eq("world")
+    end
+  end
+
+  context "#run" do
+    it "creates getters and setters from input" do
+      object = subject.run(hello: "world", seeya: nil)
+      world  = object.hello
+      expect(world).to eq("world")
+      object.seeya = "later"
+      expect(seeya).to eq("later")
     end
   end
 end
