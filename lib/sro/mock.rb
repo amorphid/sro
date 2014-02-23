@@ -1,0 +1,2 @@
+module Sro::Mock
+end
