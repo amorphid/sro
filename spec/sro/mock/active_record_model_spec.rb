@@ -15,4 +15,13 @@ describe Sro::Mock::ActiveRecordModel do
       expect(object).to be_instance_of(Sro::Mock::ActiveRecordModel)
     end
   end
+
+  context "#inject_getter" do
+    it "adds method to the object" do
+      subject.inject_getter("hello")
+      subject.instance_variable_set("@hello", "world")
+      hello  = subject.hello
+      expect(hello).to eq("world")
+    end
+  end
 end
