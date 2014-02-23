@@ -25,6 +25,15 @@ describe Sro::Mock::ActiveRecordModel do
     end
   end
 
+  context "#inject_setter" do
+    it "adds method to the object" do
+      subject.inject_setter(:hello)
+      subject.hello = "world"
+      hello  = subject.instance_variable_get("@hello")
+      expect(hello).to eq("world")
+    end
+  end
+
   context "#set_getter" do
     it "generates getter" do
       getter = subject.set_getter(:hello)
