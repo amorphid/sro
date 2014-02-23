@@ -1,5 +1,5 @@
 module Sro::Mock
-  class ActiveRecordModel
+  class ActiveRecordModel < ActiveRecord::Base
     def active_record_model
       ActiveRecordModel.new
     end

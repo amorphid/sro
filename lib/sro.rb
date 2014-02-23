@@ -1,8 +1,8 @@
+require "active_record"
 require "uuidtools"
 
 module Sro
 end
-
 
 require "sro/mock"
 require "sro/mock/active_record_model"
