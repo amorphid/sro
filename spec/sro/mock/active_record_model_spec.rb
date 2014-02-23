@@ -40,4 +40,11 @@ describe Sro::Mock::ActiveRecordModel do
       expect(getter).to eq("def hello; @hello ; end;")
     end
   end
+
+  context "#set_setter" do
+    it "generates setter" do
+      getter = subject.set_setter(:hello)
+      expect(getter).to eq("def hello=(value); @hello=value; end;")
+    end
+  end
 end
