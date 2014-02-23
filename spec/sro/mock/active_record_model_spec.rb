@@ -5,7 +5,7 @@ describe Sro::Mock::ActiveRecordModel do
 
   it "inherits from ActiveRecord::Base" do
     klass    = subject.class
-    ancestors = klass
+    ancestors = klass.ancestors
     expect(ancestors).to include(ActiveRecord::Base)
   end
 
