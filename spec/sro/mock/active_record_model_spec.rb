@@ -6,7 +6,7 @@ describe Sro::Mock::ActiveRecordModel do
   context "#active_record_model" do
     it "returns an ActiveRecordModel object" do
       object = subject.active_record_model
-      expect(object).to be_instance_of(ActiveRecordModel)
+      expect(object).to be_instance_of(Sro::Mock::ActiveRecordModel)
     end
   end
 end
