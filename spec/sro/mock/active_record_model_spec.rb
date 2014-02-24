@@ -9,13 +9,6 @@ describe Sro::Mock::ActiveRecordModel do
     expect(ancestors).to include(ActiveRecord::Base)
   end
 
-  context "#active_record_model" do
-    it "returns an ActiveRecordModel object" do
-      object = subject.active_record_model
-      expect(object).to be_instance_of(Sro::Mock::ActiveRecordModel)
-    end
-  end
-
   context "#inject_getter" do
     it "adds method to the object" do
       subject.inject_getter("hello")
